@@ -22,7 +22,39 @@ class _HomeState extends State<Home> {
                 AppButton(label: 'AC'),
                 AppButton(label: '+/-'),
                 AppButton(label: '%'),
-                AppButton(label: '/')
+                AppButton(label: '/', btnColor: Color(0xffffa00a)),
+              ],
+            ),
+            Row(
+              children: const [
+                AppButton(label: '7'),
+                AppButton(label: '8'),
+                AppButton(label: '0'),
+                AppButton(label: 'x', btnColor: Color(0xffffa00a)),
+              ],
+            ),
+            Row(
+              children: const [
+                AppButton(label: '4'),
+                AppButton(label: '5'),
+                AppButton(label: '6'),
+                AppButton(label: '-', btnColor: Color(0xffffa00a)),
+              ],
+            ),
+            Row(
+              children: const [
+                AppButton(label: '1'),
+                AppButton(label: '2'),
+                AppButton(label: '3'),
+                AppButton(label: '+', btnColor: Color(0xffffa00a)),
+              ],
+            ),
+            Row(
+              children: const [
+                AppButton(label: '0'),
+                AppButton(label: '.'),
+                AppButton(label: 'DEL'),
+                AppButton(label: '=', btnColor: Color(0xffffa00a)),
               ],
             ),
           ],
