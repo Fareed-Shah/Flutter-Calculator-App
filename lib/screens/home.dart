@@ -19,14 +19,24 @@ class _HomeState extends State<Home> {
         child: Column(
           children: [
             Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
-                  Text('faredasdfas'),
-                  Text('faredasdfas'),
-                  Text('faredasdfas'),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.only(right: 15.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: const [
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Text(
+                        '0',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Expanded(
@@ -73,6 +83,29 @@ class _HomeState extends State<Home> {
                       AppButton(label: '=', btnColor: Color(0xffffa00a)),
                     ],
                   ),
+                  const SizedBox(
+                    height: 30.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      RichText(
+                          text: const TextSpan(children: [
+                        TextSpan(
+                          text: 'Calculator App Design By :',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        TextSpan(
+                          text: ' Fareed Shah',
+                          style: TextStyle(
+                              fontSize: 25.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ])),
+                    ],
+                  )
                 ],
               ),
             ),
