@@ -15,7 +15,9 @@ class _HomeState extends State<Home> {
 
   void equalPress() {
     Parser parser = Parser();
-    Expression expression = parser.parse(userInput);
+
+    String finalnput = userInput.replaceAll('x', '*');
+    Expression expression = parser.parse(finalnput);
     ContextModel contextModel = ContextModel();
     double eval = expression.evaluate(EvaluationType.REAL, contextModel);
     answer = eval.toString();
@@ -27,9 +29,16 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.black,
       body: SafeArea(
           child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
         child: Column(
           children: [
+            const Text(
+              'Calculator App',
+              style: TextStyle(
+                  color: Color(0xffffa00a),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25.0),
+            ),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(right: 15.0),
@@ -50,7 +59,9 @@ class _HomeState extends State<Home> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: Text(
-                        answer.toString(),
+                        answer != ""
+                            ? "Result : ${answer.toString()}"
+                            : answer.toString(),
                         style: const TextStyle(
                             color: Colors.white,
                             fontSize: 30.0,
@@ -218,7 +229,8 @@ class _HomeState extends State<Home> {
                           label: 'DEL',
                           onPress: () {
                             setState(() {
-                              userInput += 'DEL';
+                              userInput =
+                                  userInput.substring(0, userInput.length - 1);
                             });
                           }),
                       AppButton(

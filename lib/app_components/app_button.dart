@@ -25,9 +25,9 @@ class AppButton extends StatelessWidget {
             child: Center(
                 child: Text(label.toString(),
                     style: const TextStyle(
-                        fontFamily: 'TiltWarp Regular',
+                        // fontFamily: 'TiltWarp Regular',
                         fontWeight: FontWeight.bold,
-                        fontSize: 16.0,
+                        fontSize: 18.0,
                         color: Colors.white))),
           ),
         ),
