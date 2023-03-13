@@ -17,8 +17,8 @@ class _HomeState extends State<Home> {
     Parser parser = Parser();
     Expression expression = parser.parse(userInput);
     ContextModel contextModel = ContextModel();
-
-    
+    double eval = expression.evaluate(EvaluationType.REAL, contextModel);
+    answer = eval.toString();
   }
 
   @override
@@ -225,7 +225,7 @@ class _HomeState extends State<Home> {
                           label: '=',
                           onPress: () {
                             setState(() {
-                              userInput += '=';
+                              equalPress();
                             });
                           },
                           btnColor: const Color(0xffffa00a)),
