@@ -15,7 +15,6 @@ class _HomeState extends State<Home> {
 
   void equalPress() {
     Parser parser = Parser();
-
     String finalnput = userInput.replaceAll('x', '*');
     Expression expression = parser.parse(finalnput);
     ContextModel contextModel = ContextModel();
@@ -117,6 +116,10 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '7';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
@@ -124,6 +127,9 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '8';
+                              if (userInput.contains('+')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
