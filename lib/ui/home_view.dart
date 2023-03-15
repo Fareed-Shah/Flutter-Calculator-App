@@ -8,7 +8,7 @@ class Home extends StatefulWidget {
   @override
   State<Home> createState() => _HomeState();
 }
- 
+
 class _HomeState extends State<Home> {
   var userInput = '';
   var answer = '';
@@ -288,8 +288,10 @@ class _HomeState extends State<Home> {
                           label: 'DEL',
                           onPress: () {
                             setState(() {
-                              userInput =
-                                  userInput.substring(0, userInput.length - 1);
+                              if (userInput.isNotEmpty) {
+                                userInput = userInput.substring(
+                                    0, userInput.length - 1);
+                              }
                             });
                           }),
                       AppButton(
