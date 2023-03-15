@@ -117,7 +117,9 @@ class _HomeState extends State<Home> {
                             setState(() {
                               userInput += '7';
                               if (userInput.contains('+') ||
-                                  userInput.contains('-')) {
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
                                 equalPress();
                               }
                             });
@@ -127,7 +129,10 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '8';
-                              if (userInput.contains('+')) {
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
                                 equalPress();
                               }
                             });
@@ -137,6 +142,12 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '0';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
@@ -156,6 +167,12 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '4';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
@@ -163,6 +180,12 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '5';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
@@ -170,6 +193,12 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '6';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
@@ -189,6 +218,12 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '1';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
@@ -196,6 +231,12 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '2';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
@@ -203,6 +244,12 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '3';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
@@ -222,6 +269,12 @@ class _HomeState extends State<Home> {
                           onPress: () {
                             setState(() {
                               userInput += '0';
+                              if (userInput.contains('+') ||
+                                  userInput.contains('-') ||
+                                  userInput.contains('/') ||
+                                  userInput.contains('x')) {
+                                equalPress();
+                              }
                             });
                           }),
                       AppButton(
